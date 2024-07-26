@@ -28,10 +28,10 @@ if st.button('Prediksi'):
         hasil_prediksi = model.predict(inputs)
         
         if hasil_prediksi[0] == 1:
-            prediksi = 'Terkena Penyakit Jantung'
+            prediksi = 'Terkena Penyakit Hati'
             st.success(prediksi)
         else:
-            prediksi = 'Tidak Terkena Penyakit Jantung'
+            prediksi = 'Tidak Terkena Penyakit Hati'
             st.markdown(f'<span style="color:red">{prediksi}</span>', unsafe_allow_html=True)
     except ValueError:
         st.error("Pastikan semua input diisi dengan angka yang valid.")
