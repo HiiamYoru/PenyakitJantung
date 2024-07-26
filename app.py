@@ -6,7 +6,7 @@ import numpy as np
 model = pickle.load(open('model.sav', 'rb'))
 
 # Judul web
-st.title('Prediksi Penyakit Jantung')
+st.title('Prediksi Penyakit Hati')
 
 # Input data
 age = st.text_input('Usia')
