@@ -6,7 +6,7 @@ import numpy as np
 model = pickle.load(open('model.sav', 'rb'))
 
 # Judul web
-st.title('Prediksi Penyakit Hati')
+st.title('Prediksi Penyakit Jantung')
 
 # Input data
 age = st.text_input('Usia')
@@ -28,10 +28,10 @@ if st.button('Prediksi'):
         hasil_prediksi = model.predict(inputs)
         
         if hasil_prediksi[0] == 1:
-            prediksi = 'Terkena Penyakit Hati'
+            prediksi = 'Terkena Penyakit Jantung'
             st.success(prediksi)
         else:
-            prediksi = 'Tidak Terkena Penyakit Hati'
+            prediksi = 'Tidak Terkena Penyakit jantung'
             st.markdown(f'<span style="color:red">{prediksi}</span>', unsafe_allow_html=True)
     except ValueError:
         st.error("Pastikan semua input diisi dengan angka yang valid.")
